@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './ProductList.css';
 import { Product } from './types';
+import mockProducts from './mockProducts'; // Importera mockade produkter
 
 interface ProductListProps {
   products?: Product[]; // Gör products till en valfri prop
@@ -12,16 +13,14 @@ function ProductList({ products: initialProducts }: ProductListProps) {
 
   useEffect(() => {
     if (!initialProducts) {
-      // Mockade produkter med placeholder-bilder
-      const mockProducts: Product[] = [
-        { id: 1, name: 'Julgranskula', price: 39, imageUrl: 'https://www.rusta.com/cdn-cgi/image/quality=60,width=1264,format=auto/globalassets/productimages/773014080104-1031-p.jpg?ref=680CEA1DA0' },
-        { id: 2, name: 'Julstjärna 2', price: 49, imageUrl: 'https://via.placeholder.com/150' },
-        { id: 3, name: 'Tomte 3', price: 39, imageUrl: 'https://via.placeholder.com/150' },
-        { id: 4, name: 'Julgran 4', price: 99, imageUrl: 'https://via.placeholder.com/150' },
-      ];
+      // Använd mockProducts från den externa filen
       setProducts(mockProducts);
     }
   }, [initialProducts]);
+
+  const addToCart = (product: Product) => {
+    alert(`${product.name} har lagts till i varukorgen!`);
+  };
 
   if (products.length === 0) {
     return <p>Inga produkter tillgängliga</p>;
@@ -36,6 +35,7 @@ function ProductList({ products: initialProducts }: ProductListProps) {
             <Link to={`/products/${product.id}`}>{product.name}</Link>
           </h2>
           <p>{product.price} kr</p>
+          <button onClick={() => addToCart(product)}>Köp</button>
         </article>
       ))}
     </div>
