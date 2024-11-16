@@ -2,21 +2,17 @@ import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './ProductList.css';
 import { Product } from './types';
-import mockProducts from './mockProducts'; // Importera mockade produkter
 
-interface ProductListProps {
-  products?: Product[]; // Gör products till en valfri prop
-}
-
-function ProductList({ products: initialProducts }: ProductListProps) {
-  const [products, setProducts] = useState<Product[]>(initialProducts || []);
+function ProductList() {
+  const [products, setProducts] = useState<Product[]>([]);
 
   useEffect(() => {
-    if (!initialProducts) {
-      // Använd mockProducts från den externa filen
-      setProducts(mockProducts);
-    }
-  }, [initialProducts]);
+    // Hämta produkter från customer.json
+    fetch('/customer.json')
+      .then((response) => response.json())
+      .then((data) => setProducts(data.products))
+      .catch((error) => console.error('Error fetching products:', error));
+  }, []);
 
   const addToCart = (product: Product) => {
     alert(`${product.name} har lagts till i varukorgen!`);

@@ -1,0 +1,31 @@
+{
+    "products": [
+      {
+        "id": 1,
+        "name": "Julgranskula",
+        "price": 39,
+        "imageUrl": "https://www.rusta.com/cdn-cgi/image/quality=60,width=1264,format=auto/globalassets/productimages/773014080104-1031-p.jpg?ref=680CEA1DA0",
+        "description": "Röd julgranskula",
+        "stock": 10
+      },
+      {
+        "id": 2,
+        "name": "Julstjärna",
+        "price": 49,
+        "imageUrl": "https://www.rusta.com/cdn-cgi/image/quality=60,width=1264,format=auto/globalassets/productimages/773211410101.jpg?ref=2CCAAC7F73",
+        "description": "Vacker julstjärna",
+        "stock": 5
+      },
+      {
+        "id": 3,
+        "name": "Tomte",
+        "price": 39,
+        "imageUrl": "https://www.rusta.com/cdn-cgi/image/quality=60,width=1264,format=auto/globalassets/productimages/772113690101-1160-p.jpg?ref=0EC4A69E55",
+        "description": "Liten tomtefigur",
+        "stock": 8
+      }
+    ],
+    "cart": []
+  }
+
+  

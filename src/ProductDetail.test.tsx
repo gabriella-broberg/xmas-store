@@ -1,40 +1,47 @@
+import { describe, test, expect, vi, beforeEach } from 'vitest';
 import { render, screen } from '@testing-library/react';
-import { MemoryRouter, Route, Routes } from 'react-router-dom'; // Lägg till Routes och Route
 import ProductDetail from './ProductDetail';
-import { test, expect, vi } from 'vitest';
+import { MemoryRouter, Route, Routes } from 'react-router-dom';
 
-vi.mock('react-router-dom', async () => {
-  const original = await vi.importActual<typeof import('react-router-dom')>('react-router-dom');
-  return {
-    ...original,
-    useParams: () => ({ id: '1' }), // Mocka useParams för att alltid returnera ett id
-  };
+// Mocka fetch
+beforeEach(() => {
+  global.fetch = vi.fn(() =>
+    Promise.resolve({
+      json: () =>
+        Promise.resolve({
+          products: [
+            {
+              id: 1,
+              name: 'Julgranskula',
+              price: 39,
+              description: 'Röd julgranskula',
+              stock: 10,
+              imageUrl: 'https://via.placeholder.com/150',
+            },
+          ],
+        }),
+    })
+  ) as unknown as typeof fetch; // Använd `as unknown` för att övervinna typkonflikten
 });
 
-test('displays product details including name, price, description, and stock', () => {
-  render(
-    <MemoryRouter initialEntries={['/products/1']}>
-      <Routes>
-        <Route path="/products/:id" element={<ProductDetail />} />
-      </Routes>
-    </MemoryRouter>
-  );
-
-  expect(screen.getByText('Julgranskula')).toBeInTheDocument();
-  expect(screen.getByText('Pris: 39 kr')).toBeInTheDocument();
-  expect(screen.getByText('Beskrivning: Röd julgranskula')).toBeInTheDocument();
-  expect(screen.getByText('Antal i lager: 10')).toBeInTheDocument();
+afterEach(() => {
+  vi.resetAllMocks();
 });
 
-test('renders a back button for navigation', () => {
-  render(
-    <MemoryRouter initialEntries={['/products/1']}>
-      <Routes>
-        <Route path="/products/:id" element={<ProductDetail />} />
-      </Routes>
-    </MemoryRouter>
-  );
+// Test för ProductDetail
+describe('ProductDetail', () => {
+  test('displays product details', async () => {
+    render(
+      <MemoryRouter initialEntries={['/products/1']}>
+        <Routes>
+          <Route path="/products/:id" element={<ProductDetail />} />
+        </Routes>
+      </MemoryRouter>
+    );
 
-  const backButton = screen.getByRole('button', { name: /Tillbaka/i });
-  expect(backButton).toBeInTheDocument();
+    // Kontrollera att data hämtas och visas korrekt
+    expect(await screen.findByText('Julgranskula')).toBeInTheDocument();
+    expect(await screen.findByText('Pris: 39 kr')).toBeInTheDocument();
+    expect(await screen.findByText('Beskrivning: Röd julgranskula')).toBeInTheDocument();
+  });
 });

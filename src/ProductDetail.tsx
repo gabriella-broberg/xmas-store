@@ -1,13 +1,22 @@
 import { useParams, useNavigate } from 'react-router-dom';
-import mockProducts from './mockProducts'; // Importera mockProducts
-
+import { useState, useEffect } from 'react';
+import { Product } from './types';
 
 function ProductDetail() {
-  const { id } = useParams<{ id: string }>(); // Hämtar ID från URL
+  const { id } = useParams<{ id: string }>();
   const navigate = useNavigate();
+  const [product, setProduct] = useState<Product | null>(null);
 
-  // Hitta produkten med matchande ID
-  const product = mockProducts.find((p) => p.id === Number(id));
+  useEffect(() => {
+    // Hämta produkter och filtrera fram rätt produkt
+    fetch('/customer.json')
+      .then((response) => response.json())
+      .then((data) => {
+        const foundProduct = data.products.find((p: Product) => p.id === Number(id));
+        setProduct(foundProduct || null);
+      })
+      .catch((error) => console.error('Error fetching product:', error));
+  }, [id]);
 
   if (!product) {
     return <p>Produkten hittades inte!</p>;
@@ -15,7 +24,6 @@ function ProductDetail() {
 
   return (
     <div>
-      {/* Lägg till bilden om imageUrl finns */}
       {product.imageUrl && <img src={product.imageUrl} alt={product.name} style={{ width: '300px', height: 'auto' }} />}
       <h1>{product.name}</h1>
       <p>Pris: {product.price} kr</p>
@@ -27,4 +35,3 @@ function ProductDetail() {
 }
 
 export default ProductDetail;
-
