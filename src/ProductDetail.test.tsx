@@ -1,5 +1,6 @@
 import { render, screen } from '@testing-library/react';
 import ProductDetail from './ProductDetail';
+import { expect, test } from 'vitest';
 
 test('displays product details including name, price, description, and stock', () => {
   const mockProduct = {

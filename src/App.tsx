@@ -1,7 +1,17 @@
-export default function App() {
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import ProductList from './ProductList';
+import ProductDetail from './ProductDetail';
+
+
+function App() {
   return (
-    <div>
-      <h1>Hello, TDD!</h1>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<ProductList />} />
+        <Route path="/products/:id" element={<ProductDetail />} />
+      </Routes>
+    </Router>
   );
 }
+
+export default App;

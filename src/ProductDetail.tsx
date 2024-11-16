@@ -1,6 +1,6 @@
-import React from 'react';
+import { Product } from './types';
 
-function ProductDetail({ product }) {
+function ProductDetail({ product }: { product?: Product }) { 
   if (!product) {
     return <p>Ingen produkt vald</p>;
   }
@@ -9,9 +9,8 @@ function ProductDetail({ product }) {
     <div>
       <h1>{product.name}</h1>
       <p>{product.price} kr</p>
-      <p>{product.description}</p>
-      <p>Antal i lager: {product.stock}</p>
-      <button>Tillbaka</button>
+      {product.description && <p>{product.description}</p>}
+      {product.stock && <p>Antal i lager: {product.stock}</p>}
     </div>
   );
 }
