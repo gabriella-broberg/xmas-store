@@ -18,8 +18,15 @@ export const CartProvider: React.FC<{ children: React.ReactNode }> = ({ children
   };
 
   const removeFromCart = (id: number) => {
-    setCart((prevCart) => prevCart.filter((item) => item.id !== id));
+    setCart((prevCart) => {
+      const index = prevCart.findIndex((item) => item.id === id);
+      if (index === -1) return prevCart; // Om produkten inte finns
+      const newCart = [...prevCart];
+      newCart.splice(index, 1); // Tar bort en instans
+      return newCart;
+    });
   };
+  
 
   return (
     <CartContext.Provider value={{ cart, addToCart, removeFromCart }}>

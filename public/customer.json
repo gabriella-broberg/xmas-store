@@ -191,6 +191,14 @@
         "imageUrl": "https://via.placeholder.com/150",
         "description": "LED-belysning för utomhusbruk",
         "stock": 4
+      },
+      {
+        "id": 25,
+        "name": "Julbelysning",
+        "price": 249,
+        "imageUrl": "https://via.placeholder.com/150",
+        "description": "LED-belysning för utomhusbruk",
+        "stock": 4
       }
     ],
     "cart": []

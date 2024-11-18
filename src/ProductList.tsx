@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import './ProductList.css';
+import './Global.css'; // Importera globala stilar
 import { Product } from './types';
 import { useCart } from './CartContext';
 
@@ -21,20 +21,16 @@ const ProductList = () => {
   }
 
   return (
-    <div>
+    <div className="product-grid">
       {products.map((product) => (
-        <article key={product.id} style={{ marginBottom: '20px' }}>
+        <div key={product.id} className="product-card">
           <img src={product.imageUrl} alt={product.name} className="product-image" />
           <h2>
             <Link to={`/products/${product.id}`}>{product.name}</Link>
           </h2>
           <p>{product.price} kr</p>
-          <button onClick={() => addToCart(product)}>Köp</button>
-
-
-
-          
-        </article>
+          <button onClick={() => addToCart(product)} className="btn primary">Köp</button>
+        </div>
       ))}
     </div>
   );

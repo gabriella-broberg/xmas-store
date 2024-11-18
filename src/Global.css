@@ -1,0 +1,215 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+html, body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f8f5f0; /* Beige bakgrund */
+  color: #4d1a1a; /* Lyxigt mörkröd för text */
+  line-height: 1.6;
+
+}
+
+/* TYPOGRAFI */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Georgia', serif; /* Elegant känsla */
+  color: #b71a1a; /* Lyxigt mörkrött */
+  margin-bottom: 10px;
+}
+
+h1 {
+  font-size: 1.8rem;
+  text-align: center;
+  border-bottom: 2px solid #b71a1a;
+  padding-bottom: 10px;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+p {
+  font-size: 0.875rem;
+  color: #4d1a1a; /* Mörkröd för kroppstext */
+  margin-bottom: 10px;
+}
+
+a {
+  text-decoration: none;
+  color: #b71a1a;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #d93838; /* Ljusare röd vid hover */
+}
+
+/* Grid-layout för produktlistan */
+.product-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 20px;
+    padding: 10px;
+  }
+  
+  /* Styling för individuella produkter */
+  .product-item {
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+
+/* LAYOUT */
+
+
+.section {
+  padding: 40px 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* KNAPPAR */
+button, .btn {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button.primary, .btn.primary {
+  background-color: #b71a1a; /* Lyxigt mörkröd */
+  color: #fff; /* Vit text */
+}
+
+button.primary:hover, .btn.primary:hover {
+  background-color: #d93838; /* Ljusare röd vid hover */
+  transform: scale(1.05);
+}
+
+button.secondary, .btn.secondary {
+  background-color: #f8f5f0; /* Beige */
+  color: #b71a1a; /* Mörkröd text */
+  border: 1px solid #b71a1a;
+}
+
+button.secondary:hover, .btn.secondary:hover {
+  background-color: #b71a1a;
+  color: #fff;
+}
+
+/* JULTEMAN */
+.christmas-banner {
+  width: 100%; 
+  max-width: 1400px; 
+  margin: 20px auto; 
+  color: #fff;
+  padding: 20px;
+  text-align: right;
+  border-radius: 8px;
+
+}
+
+
+
+/* LAYOUT */
+.container {
+  max-width: 1600px; /* Ökad maxbredd för bredare skärmar */
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+
+
+.product-grid {
+  display: grid;
+  gap: 15px; /* Mellanrum mellan korten */
+  padding: 15px;
+
+  /* Grundlayout: 2 kolumner */
+  grid-template-columns: repeat(2, 1fr);
+}
+
+@media (min-width: 576px) {
+  /* 3 kolumner på små skärmar */
+  .product-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 768px) {
+  /* 4 kolumner på tablets */
+  .product-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (min-width: 1200px) {
+  /* 5 kolumner på desktops */
+  .product-grid {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+/* Produktkort */
+.product-card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px;
+  text-align: center;
+ 
+}
+
+
+
+.product-image {
+  width: 100%; /* Anpassar till kortets bredd */
+  height: 120px; /* Justera höjd för att få mindre kort */
+  object-fit: cover;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.product-card .btn {
+  margin-top: 10px;
+  padding: 8px 12px;
+  font-size: 0.85rem; /* Mindre textstorlek för knappen */
+  font-weight: bold;
+  color: #fff;
+  background-color: #b71a1a;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.product-card .btn:hover {
+  background-color: #d93838;
+  transform: scale(1.05);
+}
+
+
+/* FOOTER */
+footer {
+  background-color: #4d1a1a; /* Mörkröd fot */
+  color: #f8f5f0; /* Beige text */
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+  font-size: 0.9rem;
+}

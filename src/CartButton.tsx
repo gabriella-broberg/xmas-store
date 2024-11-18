@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { useCart } from './CartContext';
-import './ProductList.css'; 
+import './Global.css'; 
 
 const CartButton = () => {
   const { cart } = useCart(); // Hämta cart från kontexten

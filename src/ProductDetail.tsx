@@ -1,14 +1,17 @@
 import { useParams, useNavigate } from 'react-router-dom';
+import { useCart } from './CartContext'; // Lägg till useCart
 import { useState, useEffect } from 'react';
-import { Product } from './types';
+import { Product } from './types'; // Typ för produkter
 
 function ProductDetail() {
   const { id } = useParams<{ id: string }>();
   const navigate = useNavigate();
+  const { addToCart } = useCart(); // Hämta addToCart
+
   const [product, setProduct] = useState<Product | null>(null);
 
   useEffect(() => {
-    // Hämta produkter och filtrera fram rätt produkt
+    // Hämta produkter från customer.json
     fetch('/customer.json')
       .then((response) => response.json())
       .then((data) => {
@@ -24,11 +27,12 @@ function ProductDetail() {
 
   return (
     <div>
-      {product.imageUrl && <img src={product.imageUrl} alt={product.name} style={{ width: '300px', height: 'auto' }} />}
+      <img src={product.imageUrl} alt={product.name} style={{ width: '300px', height: 'auto' }} />
       <h1>{product.name}</h1>
       <p>Pris: {product.price} kr</p>
       {product.description && <p>Beskrivning: {product.description}</p>}
       {product.stock && <p>Antal i lager: {product.stock}</p>}
+      <button onClick={() => addToCart(product)}>Köp</button>
       <button onClick={() => navigate(-1)}>Tillbaka</button>
     </div>
   );
