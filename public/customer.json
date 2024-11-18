@@ -23,9 +23,176 @@
         "imageUrl": "https://www.rusta.com/cdn-cgi/image/quality=60,width=1264,format=auto/globalassets/productimages/772113690101-1160-p.jpg?ref=0EC4A69E55",
         "description": "Liten tomtefigur",
         "stock": 8
+      },
+      {
+        "id": 4,
+        "name": "Kronljus",
+        "price": 59,
+        "imageUrl": "https://www.rusta.com/cdn-cgi/image/quality=60,width=1264,format=auto/globalassets/productimages/f_782014280201_3.jpg?ref=E42AD27C8B",
+        "description": "20-pack vita 100% stearinljus",
+        "stock": 12
+      },
+      {
+        "id": 5,
+        "name": "Julkrans",
+        "price": 99,
+        "imageUrl": "https://via.placeholder.com/150",
+        "description": "Vacker grön julkrans",
+        "stock": 4
+      },
+      {
+        "id": 6,
+        "name": "Ljusslinga",
+        "price": 149,
+        "imageUrl": "https://via.placeholder.com/150",
+        "description": "Varmvita LED-lampor",
+        "stock": 20
+      },
+      {
+        "id": 7,
+        "name": "Julgran",
+        "price": 399,
+        "imageUrl": "https://via.placeholder.com/150",
+        "description": "Grön konstgjord julgran",
+        "stock": 6
+      },
+      {
+        "id": 8,
+        "name": "Presentpapper",
+        "price": 29,
+        "imageUrl": "https://via.placeholder.com/150",
+        "description": "Röd- och vitrandigt presentpapper",
+        "stock": 15
+      },
+      {
+        "id": 9,
+        "name": "Julstrumpa",
+        "price": 49,
+        "imageUrl": "https://via.placeholder.com/150",
+        "description": "Mjukt rött material med vit kant",
+        "stock": 10
+      },
+      {
+        "id": 10,
+        "name": "Adventsljusstake",
+        "price": 129,
+        "imageUrl": "https://via.placeholder.com/150",
+        "description": "Klassisk röd ljusstake med 4 ljus",
+        "stock": 8
+      },
+      {
+        "id": 11,
+        "name": "Pepparkaksformar",
+        "price": 69,
+        "imageUrl": "https://via.placeholder.com/150",
+        "description": "10-pack olika julmotiv",
+        "stock": 14
+      },
+      {
+        "id": 12,
+        "name": "Julservetter",
+        "price": 25,
+        "imageUrl": "https://via.placeholder.com/150",
+        "description": "Servetter med snöflingor",
+        "stock": 25
+      },
+      {
+        "id": 13,
+        "name": "Julduk",
+        "price": 79,
+        "imageUrl": "https://via.placeholder.com/150",
+        "description": "Röd duk med vita snöflingor",
+        "stock": 7
+      },
+      {
+        "id": 14,
+        "name": "Julpyntset",
+        "price": 89,
+        "imageUrl": "https://via.placeholder.com/150",
+        "description": "Set med 20 små julpynt",
+        "stock": 10
+      },
+      {
+        "id": 15,
+        "name": "Kanelstänger",
+        "price": 29,
+        "imageUrl": "https://via.placeholder.com/150",
+        "description": "Dekorativa och doftande kanelstänger",
+        "stock": 50
+      },
+      {
+        "id": 16,
+        "name": "Julgransmatta",
+        "price": 199,
+        "imageUrl": "https://via.placeholder.com/150",
+        "description": "Mjuk grön matta till julgranen",
+        "stock": 5
+      },
+      {
+        "id": 17,
+        "name": "Snöglob",
+        "price": 129,
+        "imageUrl": "https://via.placeholder.com/150",
+        "description": "Snöglob med tomtemotiv",
+        "stock": 8
+      },
+      {
+        "id": 18,
+        "name": "Lucialinne",
+        "price": 99,
+        "imageUrl": "https://via.placeholder.com/150",
+        "description": "Klassiskt vitt lucialinne",
+        "stock": 6
+      },
+      {
+        "id": 19,
+        "name": "Juldoftljus",
+        "price": 49,
+        "imageUrl": "https://via.placeholder.com/150",
+        "description": "Doftljus med vanilj och kanel",
+        "stock": 15
+      },
+      {
+        "id": 20,
+        "name": "Adventskalender",
+        "price": 99,
+        "imageUrl": "https://via.placeholder.com/150",
+        "description": "Chokladkalender för december",
+        "stock": 10
+      },
+      {
+        "id": 21,
+        "name": "Tomteluva",
+        "price": 29,
+        "imageUrl": "https://via.placeholder.com/150",
+        "description": "Klassisk röd tomteluva",
+        "stock": 30
+      },
+      {
+        "id": 22,
+        "name": "Glöggmuggar",
+        "price": 69,
+        "imageUrl": "https://via.placeholder.com/150",
+        "description": "4-pack med glöggmuggar",
+        "stock": 12
+      },
+      {
+        "id": 23,
+        "name": "Snöflingedekor",
+        "price": 19,
+        "imageUrl": "https://via.placeholder.com/150",
+        "description": "Självhäftande snöflingor för fönster",
+        "stock": 40
+      },
+      {
+        "id": 24,
+        "name": "Julbelysning",
+        "price": 249,
+        "imageUrl": "https://via.placeholder.com/150",
+        "description": "LED-belysning för utomhusbruk",
+        "stock": 4
       }
     ],
     "cart": []
   }
-
   

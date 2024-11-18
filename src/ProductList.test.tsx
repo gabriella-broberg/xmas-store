@@ -1,3 +1,5 @@
+// TODO: Undersök varför `vi` ger TypeScript-fel i denna fil.
+
 import { test, expect, vi, beforeEach } from 'vitest';
 import { render, screen } from '@testing-library/react';
 import { MemoryRouter } from 'react-router-dom';
@@ -53,6 +55,8 @@ test('handles fetch error gracefully', async () => {
     </MemoryRouter>
   );
 
+
+  
   // Vänta på att fallback-meddelandet visas
   expect(await screen.findByText('Inga produkter tillgängliga')).toBeInTheDocument();
 });
