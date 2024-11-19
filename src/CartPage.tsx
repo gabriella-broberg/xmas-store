@@ -1,4 +1,6 @@
 import { useCart } from './CartContext';
+import './global.css'; // Importera den globala CSS-filen
+
 
 const CartPage = () => {
   const { cart, removeFromCart } = useCart();
@@ -8,7 +10,7 @@ const CartPage = () => {
   }
 
   return (
-    <div>
+    <div className="container">
       <h1>Varukorg</h1>
       {cart.map((product) => (
         <div key={product.id} style={{ marginBottom: '20px' }}>
