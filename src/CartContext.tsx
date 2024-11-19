@@ -12,6 +12,8 @@ const CartContext = createContext<CartContextType | undefined>(undefined);
 export const CartProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [cart, setCart] = useState<Product[]>([]);
 
+  
+
   const addToCart = (product: Product) => {
     console.log('Adding to cart:', product); // Logga produkten som läggs till
     setCart((prevCart) => [...prevCart, product]);
@@ -26,6 +28,7 @@ export const CartProvider: React.FC<{ children: React.ReactNode }> = ({ children
       return newCart;
     });
   };
+  
   
 
   return (

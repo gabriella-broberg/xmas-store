@@ -34,7 +34,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: 2.5rem;
+  font-size: 3rem;
   text-align: center;
   border-bottom: 2px solid #b71a1a;
   padding-bottom: 10px;
@@ -42,7 +42,7 @@ h1 {
 }
 
 h2 {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
 }
 
 p {
@@ -185,6 +185,7 @@ button.secondary:hover, .btn.secondary:hover {
 
 /* Produktkort */
 .product-card {
+  width: 200px;
   background-color: #fff;
   border: 1px solid #ddd;
   border-radius: 8px;
@@ -196,9 +197,10 @@ button.secondary:hover, .btn.secondary:hover {
 
 
 .product-image {
-  width: 100%; /* Anpassar till kortets bredd */
-  height: 120px; /* Justera höjd för att få mindre kort */
-  object-fit: cover;
+
+  height: 150px; 
+  max-width: 150px;
+
   border-radius: 5px;
   margin-bottom: 10px;
 }

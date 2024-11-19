@@ -4,7 +4,7 @@
         "id": 1,
         "name": "Julgranskula",
         "price": 39,
-        "imageUrl": "https://www.rusta.com/cdn-cgi/image/quality=60,width=1264,format=auto/globalassets/productimages/773014080104-1031-p.jpg?ref=680CEA1DA0",
+        "imageUrl": "https://www.rusta.com/cdn-cgi/image/quality=60,width=1264,format=auto/globalassets/productimages/773014080104-1031-p.jpg",
         "description": "Röd julgranskula",
         "stock": 10
       },
@@ -12,7 +12,7 @@
         "id": 2,
         "name": "Julstjärna",
         "price": 49,
-        "imageUrl": "https://www.rusta.com/cdn-cgi/image/quality=60,width=1264,format=auto/globalassets/productimages/773211410101.jpg?ref=2CCAAC7F73",
+        "imageUrl": "https://www.rusta.com/cdn-cgi/image/quality=60,width=1264,format=auto/globalassets/productimages/773211410101.jpg",
         "description": "Vacker julstjärna",
         "stock": 5
       },
@@ -20,7 +20,7 @@
         "id": 3,
         "name": "Tomte",
         "price": 39,
-        "imageUrl": "https://www.rusta.com/cdn-cgi/image/quality=60,width=1264,format=auto/globalassets/productimages/772113690101-1160-p.jpg?ref=0EC4A69E55",
+        "imageUrl": "https://www.rusta.com/cdn-cgi/image/quality=60,width=1264,format=auto/globalassets/productimages/772113690101-1160-p.jpg",
         "description": "Liten tomtefigur",
         "stock": 8
       },
@@ -36,7 +36,7 @@
         "id": 5,
         "name": "Julkrans",
         "price": 99,
-        "imageUrl": "https://via.placeholder.com/150",
+        "imageUrl": "https://img.freepik.com/premium-vector/white-card-with-christmas-wreath-vector-paper-illustration_1052179-61.jpg",
         "description": "Vacker grön julkrans",
         "stock": 4
       },
@@ -44,23 +44,23 @@
         "id": 6,
         "name": "Ljusslinga",
         "price": 149,
-        "imageUrl": "https://via.placeholder.com/150",
+        "imageUrl": "https://www.rusta.com/cdn-cgi/image/quality=80,width=1023,format=auto/globalassets/productimages/771715022201-203-p.jpg",
         "description": "Varmvita LED-lampor",
         "stock": 20
       },
       {
         "id": 7,
         "name": "Julgran",
-        "price": 399,
-        "imageUrl": "https://via.placeholder.com/150",
-        "description": "Grön konstgjord julgran",
+        "price": 499,
+        "imageUrl": "https://www.rusta.com/cdn-cgi/image/quality=80,width=1023,format=auto/globalassets/productimages/772311720401-31-p.jpg",
+        "description": "Grön konstgjord julgran med 160 LED-lampor",
         "stock": 6
       },
       {
         "id": 8,
         "name": "Presentpapper",
         "price": 29,
-        "imageUrl": "https://via.placeholder.com/150",
+        "imageUrl": "https://www.rusta.com/cdn-cgi/image/quality=80,width=1023,format=auto/globalassets/productimages/7331121534253-91-p.jpg",
         "description": "Röd- och vitrandigt presentpapper",
         "stock": 15
       },
@@ -68,7 +68,7 @@
         "id": 9,
         "name": "Julstrumpa",
         "price": 49,
-        "imageUrl": "https://via.placeholder.com/150",
+        "imageUrl": "https://www.rusta.com/cdn-cgi/image/quality=80,width=1023,format=auto/globalassets/productimages/771019590402-266-p.jpg",
         "description": "Mjukt rött material med vit kant",
         "stock": 10
       },
@@ -76,7 +76,7 @@
         "id": 10,
         "name": "Adventsljusstake",
         "price": 129,
-        "imageUrl": "https://via.placeholder.com/150",
+        "imageUrl": "https://www.rusta.com/cdn-cgi/image/quality=80,width=1023,format=auto/globalassets/productimages/771512870301-160-p.jpg",
         "description": "Klassisk röd ljusstake med 4 ljus",
         "stock": 8
       },
@@ -84,7 +84,7 @@
         "id": 11,
         "name": "Pepparkaksformar",
         "price": 69,
-        "imageUrl": "https://via.placeholder.com/150",
+        "imageUrl": "https://www.rusta.com/cdn-cgi/image/quality=80,width=1023,format=auto/globalassets/productimages/802517220101-286-p.jpg",
         "description": "10-pack olika julmotiv",
         "stock": 14
       },
@@ -92,7 +92,7 @@
         "id": 12,
         "name": "Julservetter",
         "price": 25,
-        "imageUrl": "https://via.placeholder.com/150",
+        "imageUrl": "https://www.rusta.com/cdn-cgi/image/quality=80,width=1023,format=auto/globalassets/productimages/78101322-39-p.jpg",
         "description": "Servetter med snöflingor",
         "stock": 25
       },
@@ -100,7 +100,7 @@
         "id": 13,
         "name": "Julduk",
         "price": 79,
-        "imageUrl": "https://via.placeholder.com/150",
+        "imageUrl": "https://www.rusta.com/cdn-cgi/image/quality=80,width=1023,format=auto/globalassets/productimages/504014840303-1525-p.jpg",
         "description": "Röd duk med vita snöflingor",
         "stock": 7
       },
@@ -108,15 +108,15 @@
         "id": 14,
         "name": "Julpyntset",
         "price": 89,
-        "imageUrl": "https://via.placeholder.com/150",
-        "description": "Set med 20 små julpynt",
+        "imageUrl": "https://www.rusta.com/cdn-cgi/image/quality=80,width=1023,format=auto/globalassets/productimages/773911840105.jpg",
+        "description": "Stjärna och glitter",
         "stock": 10
       },
       {
         "id": 15,
         "name": "Kanelstänger",
         "price": 29,
-        "imageUrl": "https://via.placeholder.com/150",
+        "imageUrl": "https://www.apohem.se/cdn-cgi/image/quality=80,width=1023,format=auto/globalassets/produktbilder/5710175121503_base.jpg",
         "description": "Dekorativa och doftande kanelstänger",
         "stock": 50
       },
@@ -124,7 +124,7 @@
         "id": 16,
         "name": "Julgransmatta",
         "price": 199,
-        "imageUrl": "https://via.placeholder.com/150",
+        "imageUrl": "https://www.rusta.com/cdn-cgi/image/quality=80,width=1023,format=auto/globalassets/productimages/45800015.jpg",
         "description": "Mjuk grön matta till julgranen",
         "stock": 5
       },
@@ -132,7 +132,7 @@
         "id": 17,
         "name": "Snöglob",
         "price": 129,
-        "imageUrl": "https://via.placeholder.com/150",
+        "imageUrl": "https://www.rusta.com/cdn-cgi/image/quality=80,width=1023,format=auto/globalassets/productimages/772901510501-213-p.jpg",
         "description": "Snöglob med tomtemotiv",
         "stock": 8
       },
@@ -140,7 +140,7 @@
         "id": 18,
         "name": "Lucialinne",
         "price": 99,
-        "imageUrl": "https://via.placeholder.com/150",
+        "imageUrl": "https://www.rusta.com/cdn-cgi/image/quality=80,width=1023,format=auto/globalassets/productimages/74801013.jpg",
         "description": "Klassiskt vitt lucialinne",
         "stock": 6
       },
@@ -148,7 +148,7 @@
         "id": 19,
         "name": "Juldoftljus",
         "price": 49,
-        "imageUrl": "https://via.placeholder.com/150",
+        "imageUrl": "https://www.rusta.com/cdn-cgi/image/quality=80,width=1023,format=auto/globalassets/productimages/782100560101-746-p.jpg",
         "description": "Doftljus med vanilj och kanel",
         "stock": 15
       },
@@ -156,7 +156,7 @@
         "id": 20,
         "name": "Adventskalender",
         "price": 99,
-        "imageUrl": "https://via.placeholder.com/150",
+        "imageUrl": "https://www.rusta.com/cdn-cgi/image/quality=80,width=1023,format=auto/globalassets/productimages/771019840102-50-p.jpg",
         "description": "Chokladkalender för december",
         "stock": 10
       },
@@ -164,7 +164,7 @@
         "id": 21,
         "name": "Tomteluva",
         "price": 29,
-        "imageUrl": "https://via.placeholder.com/150",
+        "imageUrl": "https://www.rusta.com/cdn-cgi/image/quality=80,width=1023,format=auto/globalassets/productimages/773311440101-244-p.jpg",
         "description": "Klassisk röd tomteluva",
         "stock": 30
       },
@@ -172,7 +172,7 @@
         "id": 22,
         "name": "Glöggmuggar",
         "price": 69,
-        "imageUrl": "https://via.placeholder.com/150",
+        "imageUrl": "https://www.rusta.com/cdn-cgi/image/quality=80,width=1023,format=auto/globalassets/productimages/803015290101-3314-p.jpg",
         "description": "4-pack med glöggmuggar",
         "stock": 12
       },
@@ -180,23 +180,23 @@
         "id": 23,
         "name": "Snöflingedekor",
         "price": 19,
-        "imageUrl": "https://via.placeholder.com/150",
+        "imageUrl": "https://www.rusta.com/cdn-cgi/image/quality=80,width=1023,format=auto/globalassets/productimages/772602850201-369-p.jpg",
         "description": "Självhäftande snöflingor för fönster",
         "stock": 40
       },
       {
         "id": 24,
-        "name": "Julbelysning",
+        "name": "Påslakanset Santa",
         "price": 249,
-        "imageUrl": "https://via.placeholder.com/150",
+        "imageUrl": "https://www.rusta.com/cdn-cgi/image/quality=80,width=1023,format=auto/globalassets/productimages/501018560101-1835-p.jpg",
         "description": "LED-belysning för utomhusbruk",
         "stock": 4
       },
       {
         "id": 25,
-        "name": "Julbelysning",
-        "price": 249,
-        "imageUrl": "https://via.placeholder.com/150",
+        "name": "Dekorationsbelysning",
+        "price": 49,
+        "imageUrl": "https://www.rusta.com/cdn-cgi/image/quality=80,width=1023,format=auto/globalassets/productimages/772502740101-1324-p.jpg",
         "description": "LED-belysning för utomhusbruk",
         "stock": 4
       }

@@ -1,39 +1,63 @@
 import { useParams, useNavigate } from 'react-router-dom';
-import { useCart } from './CartContext'; // Lägg till useCart
+import { useCart } from './CartContext';
 import { useState, useEffect } from 'react';
-import { Product } from './types'; // Typ för produkter
+import { Product } from './types';
 
 function ProductDetail() {
   const { id } = useParams<{ id: string }>();
   const navigate = useNavigate();
-  const { addToCart } = useCart(); // Hämta addToCart
+  const { addToCart } = useCart();
 
   const [product, setProduct] = useState<Product | null>(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-    // Hämta produkter från customer.json
-    fetch('/customer.json')
-      .then((response) => response.json())
+    // Hämta produkten från backend via proxy
+    fetch(`/products`)
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error(`HTTP Error: ${response.status}`);
+        }
+        return response.json();
+      })
       .then((data) => {
         const foundProduct = data.products.find((p: Product) => p.id === Number(id));
         setProduct(foundProduct || null);
+        setLoading(false);
       })
-      .catch((error) => console.error('Error fetching product:', error));
+      .catch((err) => {
+        console.error('Error fetching product:', err);
+        setError('Kunde inte hämta produktinformation.');
+        setLoading(false);
+      });
   }, [id]);
+
+  if (loading) {
+    return <p>Laddar produktinformation...</p>;
+  }
+
+  if (error) {
+    return <p>{error}</p>;
+  }
 
   if (!product) {
     return <p>Produkten hittades inte!</p>;
   }
 
   return (
-    <div>
+    <div className="container">
       <img src={product.imageUrl} alt={product.name} style={{ width: '300px', height: 'auto' }} />
-      <h1>{product.name}</h1>
+      <h2>{product.name}</h2>
       <p>Pris: {product.price} kr</p>
       {product.description && <p>Beskrivning: {product.description}</p>}
       {product.stock && <p>Antal i lager: {product.stock}</p>}
-      <button onClick={() => addToCart(product)}>Köp</button>
-      <button onClick={() => navigate(-1)}>Tillbaka</button>
+      <button onClick={() => addToCart(product)} className="btn primary">
+        Köp
+      </button>
+      <button onClick={() => navigate(-1)} className="btn secondary">
+        Tillbaka
+      </button>
     </div>
   );
 }

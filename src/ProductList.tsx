@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import './Global.css'; // Importera globala stilar
+import './Global.css'; 
 import { Product } from './types';
 import { useCart } from './CartContext';
 
@@ -9,12 +9,20 @@ const ProductList = () => {
   const [products, setProducts] = useState<Product[]>([]);
 
   useEffect(() => {
-    // Hämta produkter från customer.json
-    fetch('/customer.json')
-      .then((response) => response.json())
-      .then((data) => setProducts(data.products))
+    fetch('/products')
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error(`HTTP Error! status: ${response.status}`);
+        }
+        return response.json();
+      })
+      .then((data) => {
+        console.log('Fetched data:', data);
+        setProducts(data.products);
+      })
       .catch((error) => console.error('Error fetching products:', error));
   }, []);
+  
 
   if (products.length === 0) {
     return <p>Inga produkter tillgängliga</p>;
