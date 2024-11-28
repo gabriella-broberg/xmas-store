@@ -5,8 +5,6 @@ import ProductList from './ProductList'; // Importera ProductList
 const HomePage: React.FC = () => {
     return (
         <div className="container">
-            <h1>Jultema</h1>
-            <p>Utforska våra fantastiska erbjudanden och julinspiration!</p>
             
             {/* Produktlistan */}
             <section>

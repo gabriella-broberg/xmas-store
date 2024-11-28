@@ -3,12 +3,16 @@
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
-
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+text-align: center;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
 
 
 * {
@@ -131,26 +135,48 @@ button.secondary:hover, .btn.secondary:hover {
 
 /* JULTEMAN */
 .christmas-banner {
-  width: 100%; 
-  max-width: 1200px; 
-  margin: 20px auto; 
-  color: #fff;
-  padding: 20px;
-  text-align: right;
-  border-radius: 8px;
+  max-width: 100%; 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px; 
+  padding: 25px;
 
+}
+
+.logo {
+  color: #b71a1a;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 3rem;
 }
 
 
 
 /* LAYOUT */
 .container {
-  max-width: 1200px; 
+  max-width: 1280px; 
   width: 100%;
   margin: 0 auto;
   padding: 20px;
+  text-align: center;
 }
 
+.card-product-detail {
+  max-width: 350px; 
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.card-product-detail h2 {
+  text-align: left;
+}
+
+.card-product-detail p {
+  text-align: left;
+}
 
 
 .product-grid {
@@ -199,8 +225,7 @@ button.secondary:hover, .btn.secondary:hover {
 .product-image {
 
   height: 150px; 
-  max-width: 150px;
-
+  max-width: 80%;
   border-radius: 5px;
   margin-bottom: 10px;
 }
@@ -226,8 +251,6 @@ button.secondary:hover, .btn.secondary:hover {
 
 /* FOOTER */
 footer {
-  background-color: #ffffff; /* Mörkröd fot */
-  color: #f8f5f0; /* Beige text */
   text-align: center;
   padding: 20px;
   margin-top: 40px;

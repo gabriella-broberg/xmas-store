@@ -1,11 +1,10 @@
-import { useParams, useNavigate } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import { useCart } from './CartContext';
 import { useState, useEffect } from 'react';
 import { Product } from './types';
 
 function ProductDetail() {
   const { id } = useParams<{ id: string }>();
-  const navigate = useNavigate();
   const { addToCart } = useCart();
 
   const [product, setProduct] = useState<Product | null>(null);
@@ -46,18 +45,19 @@ function ProductDetail() {
   }
 
   return (
-    <div className="container">
+    <div className="card-product-detail">
       <img src={product.imageUrl} alt={product.name} style={{ width: '300px', height: 'auto' }} />
       <h2>{product.name}</h2>
       <p>Pris: {product.price} kr</p>
       {product.description && <p>Beskrivning: {product.description}</p>}
       {product.stock && <p>Antal i lager: {product.stock}</p>}
+     
+      
+
       <button onClick={() => addToCart(product)} className="btn primary">
         Köp
       </button>
-      <button onClick={() => navigate(-1)} className="btn secondary">
-        Tillbaka
-      </button>
+    
     </div>
   );
 }

@@ -12,6 +12,7 @@ function App() {
       <Router>
         {/* Header */}
         <header className="christmas-banner">
+        <div className="logo">Jultema</div>
           <CartButton />
         </header>
 
